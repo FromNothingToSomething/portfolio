@@ -1,0 +1,55 @@
+/* Animations for the portfolio website */
+
+/* Typing cursor animation */
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+/* Pattern background */
+.pattern-grid-lg {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Dark mode transition */
+.dark .pattern-grid-lg {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+/* Page transition animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Staggered animation delay for children */
+section > div > div:nth-child(1) { animation-delay: 0.1s; }
+section > div > div:nth-child(2) { animation-delay: 0.2s; }
+section > div > div:nth-child(3) { animation-delay: 0.3s; }
+section > div > div:nth-child(4) { animation-delay: 0.4s; }
+section > div > div:nth-child(5) { animation-delay: 0.5s; }
+section > div > div:nth-child(6) { animation-delay: 0.6s; }
+
+/* Hover animations for cards */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+}
+
+/* Add to tailwind.config.js if needed */
+.hover-glow:hover {
+  animation: pulseGlow 1.5s infinite;
+}
