@@ -20,7 +20,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Update dark mode
   useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add('dark');<h2 className="relative inline-block group">
+  <span className="text-2xl font-bold">À propos de moi</span>
+  <div className="absolute -bottom-1 left-0 w-0 h-1 bg-blue-500 transition-all duration-300 ease-in-out group-hover:w-full opacity-0 group-hover:opacity-100"></div>
+</h2>
     } else {
       document.documentElement.classList.remove('dark');
     }
