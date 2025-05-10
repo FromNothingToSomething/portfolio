@@ -41,7 +41,7 @@ const About: React.FC = () => {
             <div className="aspect-[4/3] bg-gray-200 dark:bg-gray-800 rounded-xl overflow-hidden relative z-10">
               <img 
                 src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Jean Dupont en plein travail" 
+                alt="Hugo Covu en plein travail" 
                 className="w-full h-full object-cover"
               />
             </div>

@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
           Bonjour, je suis{' '}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500">
-            Jean Dupont
+            Hugo Covu
           </span>
         </h1>
         
