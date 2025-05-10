@@ -23,15 +23,15 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
 
     emailjs.send(
-      'service_ph3xl9p', // Ton service ID
-      'template_xyz123', // Remplace par ton vrai template ID
+      'service_ph3xl9p', 
+      'template_xyz123', 
       {
         from_name: formData.name,
         reply_to: formData.email,
         subject: formData.subject,
         message: formData.message,
       },
-      'OvNUMTGBAJD_9YES5' // Ta public key
+      'OvNUMTGBAJD_9YES5' 
     )
     .then(() => {
       setIsSubmitting(false);
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
             </div>
             <div>
               <h4 className="text-lg font-medium mb-1">Localisation</h4>
-              <p className="text-gray-600 dark:text-gray-400">Paris, France</p>
+              <p className="text-gray-600 dark:text-gray-400">Rennes, France</p>
             </div>
           </div>
         </div>
