@@ -1,48 +1,45 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
-const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  emailjs.send(
+    'service_ph3xl9p',
+    'template_xyz123', // 🔁 Remplace ceci par ton vrai Template ID EmailJS
+    {
+      from_name: formData.name,
+      reply_to: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    },
+    'OvNUMTGBAJD_9YES5'
+  )
+  .then(() => {
+    setIsSubmitting(false);
+    setSubmitMessage({
+      text: 'Merci pour votre message ! Je vous répondrai dès que possible.',
+      isError: false
+    });
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+    setTimeout(() => setSubmitMessage(null), 5000);
+  })
+  .catch(() => {
+    setIsSubmitting(false);
+    setSubmitMessage({
+      text: 'Une erreur est survenue. Merci de réessayer plus tard.',
+      isError: true
+    });
   });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState<{text: string, isError: boolean} | null>(null);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitMessage({
-        text: 'Merci pour votre message ! Je vous répondrai dès que possible.',
-        isError: false
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Clear message after 5 seconds
-      setTimeout(() => {
-        setSubmitMessage(null);
-      }, 5000);
-    }, 1000);
-  };
+};
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
