@@ -31,7 +31,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, [isDarkMode]);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode(!isDarkMode);<h2 className="text-3xl sm:text-4xl font-bold mb-4 relative inline-block group">
+  Mes compétences
+  <span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 dark:bg-blue-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+</h2>
   };
 
   // Smooth scroll implementation
