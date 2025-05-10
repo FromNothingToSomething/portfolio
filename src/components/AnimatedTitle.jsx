@@ -3,11 +3,21 @@ import React, { useState } from 'react';
 const AnimatedTitle = ({ children }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const handleMouseEnter = () => {
+    console.log('Souris entrée');
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    console.log('Souris sortie');
+    setIsHovered(false);
+  };
+
   return (
     <div
       className="relative inline-block cursor-pointer"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <h2 className="text-2xl font-bold">{children}</h2>
       <div
