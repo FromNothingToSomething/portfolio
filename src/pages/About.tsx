@@ -22,7 +22,7 @@ const About: React.FC = () => {
             </p>
             
             <p>
-              Quand je ne code pas, vous pouvez me trouver en train de lire sur les nouvelles technologies, de randonner ou de jouer aux échecs.
+              Quand je ne code pas, vous pouvez me trouver en train de lire sur les nouvelles technologies, de randonner ou de regarder Vitality et 3DMAX sur CounterStrike!
             </p>
           </div>
           

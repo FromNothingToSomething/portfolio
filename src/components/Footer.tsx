@@ -45,12 +45,12 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-2">N'hésitez pas à me contacter pour discuter de vos projets.</p>
-            <a href="mailto:contact@example.com" className="text-blue-600 dark:text-blue-500 hover:underline">contact@example.com</a>
+            <a href="mailto:contact@example.com" className="text-blue-600 dark:text-blue-500 hover:underline">hugo.covu@gmail.com</a>
           </div>
         </div>
         
         <div className="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; {currentYear} Portfolio. Tous droits réservés.</p>
+          <p>&copy; {currentYear} Hugo Covu. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
